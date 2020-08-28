@@ -40,7 +40,7 @@ func main() {
 	}
 	
 	rand.Seed(time.Now().UnixNano())
-
+	
 	fmt.Println(wordArrayOne[rand.Intn(58103)], wordArrayTwo[rand.Intn(10)])
 }
 
