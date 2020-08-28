@@ -1,0 +1,10 @@
+generator
+maker
+game
+reader
+doer
+sharer
+getter
+creator
+simulator
+program
