@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"bufio"
 	"os"
+	"time"
 	"math/rand"
 )
 
@@ -21,8 +22,10 @@ func main() {
 
 	scannerOne := bufio.NewScanner(wordFile)
 	scannerTwo := bufio.NewScanner(operatorFile)
+
 	var wordArrayOne[58103] string
 	var wordArrayTwo[10] string
+
 	indexOne := 0
 	indexTwo := 0
 
@@ -35,6 +38,8 @@ func main() {
 		wordArrayTwo[indexTwo] = scannerTwo.Text()
 		indexTwo++
 	}
+	
+	rand.Seed(time.Now().UnixNano())
 
 	fmt.Println(wordArrayOne[rand.Intn(58103)], wordArrayTwo[rand.Intn(10)])
 }
