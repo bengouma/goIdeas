@@ -23,7 +23,7 @@ func main() {
 
 	doc, err := goquery.NewDocumentFromReader(response.Body)
 	if err != nil {
-		fmt.Println("Error copying site body to output")
+		fmt.Println("Error creating document for goquery to parse")
 	}
 	doc.Find("div").Each(processSite)
 }
